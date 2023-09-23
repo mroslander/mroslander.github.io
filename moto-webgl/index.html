@@ -110,7 +110,7 @@
                 fullscreenButton.onclick = () => {
                   unityInstance.SetFullscreen(1);                  
                 };
-                unityInstance.SendMessage('Main', 'SetParameters', windows.location.search);
+                unityInstance.SendMessage('Main', 'SetParameters', window.location.search);
               }).catch((message) => {
                 alert(message);
               });
