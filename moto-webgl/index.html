@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | moto</title>
+    <title>Moto Test Build</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
@@ -108,8 +108,9 @@
               }).then((unityInstance) => {
                 loadingBar.style.display = "none";
                 fullscreenButton.onclick = () => {
-                  unityInstance.SetFullscreen(1);
+                  unityInstance.SetFullscreen(1);                  
                 };
+                unityInstance.SendMessage('Main', 'SetParameters', windows.location.search);
               }).catch((message) => {
                 alert(message);
               });
